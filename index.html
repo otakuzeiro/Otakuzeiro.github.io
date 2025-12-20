@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Anime | Notícias e Análises Geek</title>
+
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+        }
+
+        body {
+            background-color: #0f0f1a;
+            color: #eaeaea;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(135deg, #6a00ff, #ff005d);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Container geral */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Seções */
+        section {
+            margin-bottom: 50px;
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #ff4ecd;
+        }
+
+        section p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Serviços */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background-color: #1c1c2e;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+
+        .service-card h3 {
+            color: #7aa2ff;
+            margin-bottom: 10px;
+        }
+
+        /* Botão */
+        .contact-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #ff005d, #6a00ff);
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: opacity 0.3s;
+        }
+
+        .contact-btn:hover {
+            opacity: 0.85;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #090914;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Responsivo */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Mundo Anime</h1>
+        <p>Notícias, análises e resumos do universo geek e dos animes</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Sobre mim -->
+        <section>
+            <h2>Sobre Mim</h2>
+            <p>
+                Sou apaixonado pelo universo geek, com foco especial em animes, mangás e cultura japonesa.
+                Aqui você encontra conteúdos objetivos, análises profundas e resumos claros dos principais
+                lançamentos, clássicos e tendências do mundo otaku.
+            </p>
+        </section>
+
+        <!-- Serviços -->
+        <section>
+            <h2>O Que Você Encontra Aqui</h2>
+
+            <div class="services">
+                <div class="service-card">
+                    <h3>📰 Notícias de Animes</h3>
+                    <p>Atualizações rápidas sobre lançamentos, trailers, anúncios oficiais e eventos do mundo anime.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>🎥 Análises e Reviews</h3>
+                    <p>Análises detalhadas de episódios, temporadas completas e filmes, sem spoilers desnecessários.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>📚 Resumos e Explicações</h3>
+                    <p>Resumos claros de arcos, histórias complexas e explicações de finais e teorias.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section>
+            <h2>Contato</h2>
+            <p>
+                Quer sugerir um anime, parceria ou entrar em contato?
+                Clique no botão abaixo e fale comigo diretamente.
+            </p>
+
+            <a href="mailto:contato@seudominio.com" class="contact-btn">
+                Entrar em Contato
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        © 2025 - Mundo Anime | Conteúdo geek com paixão otaku
+    </footer>
+
+</body>
+  </html>
