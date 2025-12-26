@@ -1,295 +1,196 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Otakuzeiro News | Notícias e Análises Geek</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Otakuzeiro News | Notícias e Análises Geek</title>
 
-    <style>
-        /* Reset básico */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
 
-        body {
-            background-color: #0f0f1a;
-            color: #eaeaea;
-            line-height: 1.6;
-        }
+body {
+    background-color: #0f0f1a;
+    color: #eaeaea;
+    line-height: 1.6;
+}
 
-        /* Cabeçalho */
-        header {
-            background: linear-gradient(135deg, #6a00ff, #ff005d);
-            padding: 40px 20px;
-            text-align: center;
-        }
+header {
+    background: linear-gradient(135deg, #6a00ff, #ff005d);
+    padding: 40px 20px;
+    text-align: center;
+}
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
+header h1 {
+    font-size: 2.5rem;
+}
 
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
+header p {
+    opacity: 0.9;
+}
 
-        /* Container geral */
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
 
-        /* Seções */
-        section {
-            margin-bottom: 50px;
-        }
+section {
+    margin-bottom: 50px;
+}
 
-        section h2 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            color: #ff4ecd;
-        }
+section h2 {
+    color: #ff4ecd;
+    margin-bottom: 15px;
+}
 
-        section p {
-            font-size: 1rem;
-            opacity: 0.9;
-        }
-
-        /* Serviços */
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .service-card {
-            background-color: #1c1c2e;
-            padding: 20px;
-            border-radius: 10px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-        }
-
-        .service-card h3 {
-            color: #7aa2ff;
-            margin-bottom: 10px;
-        }
-
-        /* Botão */
-        .contact-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 30px;
-            background: linear-gradient(135deg, #ff005d, #6a00ff);
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 30px;
-            transition: opacity 0.3s;
-        }
-
-        .contact-btn:hover {
-            opacity: 0.85;
-        }
-
-        /* Rodapé */
-        footer {
-            background-color: #090914;
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
-            opacity: 0.7;
-        }
-
-        /* Responsivo */
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            section h2 {
-                font-size: 1.5rem;
-            }
 /* Notícias */
 .news-list {
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
-<section>
-    <h2>Últimas Notícias</h2>
-
-    <article class="news-card">
-        <h3>Nova temporada de Jujutsu Kaisen é anunciada</h3>
-        <p class="date">20 de dezembro de 2025</p>
-        <p>
-            O estúdio MAPPA confirmou oficialmente a nova temporada do anime.
-        </p>
-        <a href="noticia-jujutsu.html">Leia mais</a>
-    </article>
-
-    <article class="news-card">
-        <h3>One Piece avança para momentos decisivos</h3>
-        <p class="date">18 de dezembro de 2025</p>
-        <p>
-            A obra de Eiichiro Oda entra em fases cruciais.
-        </p>
-        <a href="noticia-onepiece.html">Leia mais</a>
-    </article>
-
-</section>
-}
 
 .news-card {
     background-color: #1c1c2e;
     padding: 25px;
     border-radius: 12px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.news-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
 }
 
 .news-card h3 {
     color: #ffccff;
-    margin-bottom: 8px;
 }
 
 .news-card .date {
     font-size: 0.85rem;
     opacity: 0.6;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .news-card a {
-    display: inline-block;
-    margin-top: 10px;
     color: #7aa2ff;
-    text-decoration: none;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .news-card a:hover {
     text-decoration: underline;
 }
-        }
-    </style>
+
+/* Serviços */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background-color: #1c1c2e;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Botão */
+.contact-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #ff005d, #6a00ff);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #090914;
+    text-align: center;
+    padding: 20px;
+    opacity: 0.7;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- Cabeçalho -->
-    <header>
-        <h1>Mundo Anime</h1>
-        <p>Notícias, análises e resumos do universo geek e dos animes</p>
-    </header>
+<header>
+    <h1>Otakuzeiro News</h1>
+    <p>Notícias, análises e resumos do mundo dos animes</p>
+</header>
 
-    <main class="container">
+<main class="container">
+
 <section>
-    <h2>Notícias Recentes</h2>
+    <h2>Últimas Notícias</h2>
 
     <div class="news-list">
 
         <article class="news-card">
-            <h3>Nova temporada de Jujutsu Kaisen é oficialmente anunciada</h3>
+            <h3>Nova temporada de Jujutsu Kaisen é anunciada</h3>
             <p class="date">20 de dezembro de 2025</p>
-            <p>
-                O estúdio MAPPA confirmou a continuação do anime, prometendo animações
-                ainda mais intensas e foco nos arcos mais aguardados do mangá.
-            </p>
-            <a href="#">Leia mais</a>
+            <p>O estúdio MAPPA confirma oficialmente a continuação do anime.</p>
+            <a href="noticia-jujutsu.html">Leia mais</a>
         </article>
 
         <article class="news-card">
-            <h3>One Piece entra definitivamente em seu arco final</h3>
+            <h3>One Piece entra em seu arco final</h3>
             <p class="date">18 de dezembro de 2025</p>
-            <p>
-                Eiichiro Oda declarou que a jornada de Luffy está se aproximando
-                do clímax, aumentando as teorias e expectativas dos fãs.
-            </p>
-            <a href="#">Leia mais</a>
-        </article>
-
-        <article class="news-card">
-            <h3>Attack on Titan segue entre os animes mais assistidos do mundo</h3>
-            <p class="date">15 de dezembro de 2025</p>
-            <p>
-                Mesmo após o encerramento da história principal, o anime continua
-                dominando rankings de popularidade em diversas plataformas.
-            </p>
-            <a href="#">Leia mais</a>
+            <p>Eiichiro Oda confirma que a história se aproxima do clímax.</p>
+            <a href="noticia-onepiece.html">Leia mais</a>
         </article>
 
     </div>
 </section>
-        <!-- Sobre mim -->
-        <section>
-            <h2>Sobre Mim</h2>
-            <p>
-                Sou apaixonado pelo universo geek, com foco especial em animes, mangás e cultura japonesa.
-                Aqui você encontra conteúdos objetivos, análises profundas e resumos claros dos principais
-                lançamentos, clássicos e tendências do mundo otaku.
-            </p>
-        </section>
 
-        <!-- Serviços -->
-        <section>
-            <h2>O Que Você Encontra Aqui</h2>
+<section>
+    <h2>Sobre Mim</h2>
+    <p>
+        Sou apaixonado por animes, mangás e cultura geek.
+        Aqui compartilho notícias, análises e resumos com foco no universo otaku.
+    </p>
+</section>
 
-            <div class="services">
-<article class="news-card">
-    <h3>TÍTULO DA NOTÍCIA</h3>
-    <p class="date">DATA</p>
-    <p>RESUMO DA NOTÍCIA...</p>
-    <a href="#">Leia mais</a>
-</article>
-                <div class="service-card">
-                    <h3>📰 Notícias de Animes</h3>
-                    <p>Atualizações rápidas sobre lançamentos, trailers, anúncios oficiais e eventos do mundo anime.</p>
-                </div>
+<section>
+    <h2>O Que Você Encontra Aqui</h2>
 
-                <div class="service-card">
-                    <h3>🎥 Análises e Reviews</h3>
-                    <p>Análises detalhadas de episódios, temporadas completas e filmes, sem spoilers desnecessários.</p>
-                </div>
+    <div class="services">
+        <div class="service-card">
+            <h3>📰 Notícias</h3>
+            <p>Atualizações rápidas do mundo dos animes.</p>
+        </div>
 
-                <div class="service-card">
-                    <h3>📚 Resumos e Explicações</h3>
-                    <p>Resumos claros de arcos, histórias complexas e explicações de finais e teorias.</p>
-                </div>
-            </div>
-        </section>
+        <div class="service-card">
+            <h3>🎥 Análises</h3>
+            <p>Reviews e análises profundas.</p>
+        </div>
 
-        <!-- Contato -->
-        <section>
-            <h2>Contato</h2>
-            <p>
-                Quer sugerir um anime, parceria ou entrar em contato?
-                Clique no botão abaixo e fale comigo diretamente.
-            </p>
+        <div class="service-card">
+            <h3>📚 Resumos</h3>
+            <p>Histórias explicadas de forma clara.</p>
+        </div>
+    </div>
+</section>
 
-            <a href="mailto:contato@seudominio.com" class="contact-btn">
-                Entrar em Contato
-            </a>
-        </section>
+<section>
+    <h2>Contato</h2>
+    <a href="mailto:contato@seudominio.com" class="contact-btn">Entrar em Contato</a>
+</section>
 
-    </main>
+</main>
 
-    <!-- Rodapé -->
-    <footer>
-        © 2025 - Mundo Anime | Conteúdo geek com paixão otaku
-    </footer>
+<footer>
+© 2025 - Otakuzeiro News
+</footer>
 
 </body>
-  </html>
+</html>
