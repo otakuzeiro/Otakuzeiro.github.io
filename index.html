@@ -53,10 +53,26 @@ nav a:hover {
     color: #ffccff;
 }
 
+/* BUSCA */
+.search-box {
+    text-align: center;
+    margin: 20px;
+}
+
+.search-box input {
+    width: 90%;
+    max-width: 400px;
+    padding: 12px 15px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
 /* FILTROS */
 .filters {
     text-align: center;
-    margin: 30px 0;
+    margin: 20px 0;
 }
 
 .filters button {
@@ -152,13 +168,6 @@ footer {
     font-size: 0.9rem;
     opacity: 0.7;
 }
-
-/* RESPONSIVO */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 2rem;
-    }
-}
 </style>
 </head>
 
@@ -175,6 +184,11 @@ footer {
     <a href="resumos.html">Resumos</a>
 </nav>
 
+<!-- BUSCA -->
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="Pesquisar notícias, análises ou resumos...">
+</div>
+
 <!-- FILTROS -->
 <div class="filters">
     <button onclick="filtrar('todos')">Todos</button>
@@ -185,18 +199,29 @@ footer {
 
 <main class="container">
 
-<!-- POSTS AUTOMÁTICOS -->
+<!-- POSTS -->
 <div id="posts" class="card-grid"></div>
 
 <!-- GALERIA -->
 <section>
-    <h2 style="color:#ff4ecd;margin:40px 0 20px;">🖼️ Galeria de Destaques</h2>
-    <div class="gallery">
-        <img src="https://via.placeholder.com/600x400?text=Jump+Fest+2025" alt="Jump Fest 2025">
-        <img src="https://via.placeholder.com/600x400?text=Jujutsu+Kaisen" alt="Jujutsu Kaisen">
-        <img src="https://via.placeholder.com/600x400?text=One+Piece" alt="One Piece">
-        <img src="https://via.placeholder.com/600x400?text=My+Hero+Academia" alt="My Hero Academia">
-    </div>
+<h2 style="color:#ff4ecd;margin:40px 0 20px;">🖼️ Galeria de Destaques</h2>
+
+<div class="gallery">
+<!-- Jump Fest -->
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1qB0rgGDyBRfqSatKh0f7aTVRjNQdI5ZyMyDFWJ6p0Q&s=10">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWe95zjiaL8cOvwUspD09d0t0fb38d9UrjvXdli0APLv1HtB2WMsM7RKW6&s=10">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd8W0UFmd6pXD7lC7DYEOKqYyr884pguDrPWZmLBmCLaZc681LybHmYaQ&s=10">
+
+<!-- One Piece -->
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFoJOeTJcqomkOXd6m2sRMsm6oLApFnqybPduNvkNmCQ&s=10">
+<img src="https://upload.wikimedia.org/wikipedia/en/6/62/Main_characters_of_One_Piece.png">
+<img src="https://pbs.twimg.com/media/GUq2Rq7W0AAy7hh.jpg">
+
+<!-- My Hero -->
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXrlEShROdqd9iSEWF8-HUJiNtZfBHjgCRdf4q4gBwnA&s=10">
+<img src="https://www.animationmagazine.net/wordpress/wp-content/uploads/My-Hero-Academia-Final-Season-crop.jpg">
+<img src="https://m.media-amazon.com/images/I/81Bpnj79aRL.jpg">
+</div>
 </section>
 
 </main>
@@ -206,71 +231,73 @@ footer {
 </footer>
 
 <script>
-/* ===== BLOG AUTOMÁTICO (JSON) ===== */
-
 const postsData = [
-    {
-        titulo: "Jump Fest 2025: Programação Completa",
-        descricao: "Painéis, stands e grandes anúncios do evento.",
-        categoria: "noticia",
-        data: "20 de dezembro de 2025",
-        imagem: "https://via.placeholder.com/600x400?text=Jump+Fest+2025",
-        link: "jumpfest2025.html"
-    },
-    {
-        titulo: "Nova temporada de Jujutsu Kaisen é anunciada",
-        descricao: "MAPPA confirma oficialmente a continuação do anime.",
-        categoria: "noticia",
-        data: "20 de dezembro de 2025",
-        imagem: "https://a.storyblok.com/f/178900/1920x1080/0dbf44cba4/jujutsu-kaisen-season-3.jpg",
-        link: "noticia-jujutsu.html"
-    },
-    {
-        titulo: "Análise do arco atual de Jujutsu Kaisen",
-        descricao: "Narrativa, animação e impacto emocional.",
-        categoria: "analise",
-        data: "21 de dezembro de 2025",
-        imagem: "https://via.placeholder.com/600x400?text=Analise+Jujutsu",
-        link: "analises.html"
-    },
-    {
-        titulo: "Resumo completo do arco final de One Piece",
-        descricao: "Tudo explicado de forma simples e direta.",
-        categoria: "resumo",
-        data: "22 de dezembro de 2025",
-        imagem: "https://via.placeholder.com/600x400?text=Resumo+One+Piece",
-        link: "resumos.html"
-    }
+{
+    titulo: "Jump Fest 2025: Programação Completa",
+    descricao: "Painéis, stands e anúncios do evento. Vídeo do canal **Kaibear Explores**.",
+    categoria: "noticia",
+    data: "20 de dezembro de 2025",
+    imagem: "https://a.storyblok.com/f/178900/1200x940/edcdc5e1f2/jump-festa-2025-key-visual.jpg/m/1200x0/filters:quality(95)format(webp)",
+    link: "jumpfest2025.html"
+},
+{
+    titulo: "Nova temporada de Jujutsu Kaisen é anunciada",
+    descricao: "MAPPA confirma oficialmente a continuação do anime.",
+    categoria: "noticia",
+    data: "20 de dezembro de 2025",
+    imagem: "https://a.storyblok.com/f/178900/1920x1080/0dbf44cba4/jujutsu-kaisen-season-3.jpg",
+    link: "noticia-jujutsu.html"
+},
+{
+    titulo: "Análise do arco atual de Jujutsu Kaisen",
+    descricao: "Narrativa, animação e impacto emocional.",
+    categoria: "analise",
+    data: "21 de dezembro de 2025",
+    imagem: "https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/8b7f5847f9b97f921e41d4ef59fd2d79.jpg",
+    link: "analises.html"
+},
+{
+    titulo: "Resumo completo do arco final de One Piece",
+    descricao: "Tudo explicado de forma simples.",
+    categoria: "resumo",
+    data: "22 de dezembro de 2025",
+    imagem: "https://pbs.twimg.com/media/Ft17j3CXoAMKdop.jpg",
+    link: "resumos.html"
+}
 ];
 
 const container = document.getElementById("posts");
+const searchInput = document.getElementById("searchInput");
 
-function renderPosts(filtro) {
+function renderPosts(filtro = "todos", busca = "") {
     container.innerHTML = "";
 
     postsData.forEach(post => {
-        if (filtro === "todos" || post.categoria === filtro) {
+        const texto = (post.titulo + post.descricao).toLowerCase();
+        if ((filtro === "todos" || post.categoria === filtro) && texto.includes(busca)) {
             container.innerHTML += `
-                <div class="card">
-                    <img src="${post.imagem}" alt="${post.titulo}">
-                    <div class="card-content">
-                        <span>${post.data} • ${post.categoria.toUpperCase()}</span>
-                        <h3>${post.titulo}</h3>
-                        <p>${post.descricao}</p>
-                        <a href="${post.link}">Leia mais</a>
-                    </div>
+            <div class="card">
+                <img src="${post.imagem}">
+                <div class="card-content">
+                    <span>${post.data} • ${post.categoria.toUpperCase()}</span>
+                    <h3>${post.titulo}</h3>
+                    <p>${post.descricao}</p>
+                    <a href="${post.link}">Leia mais</a>
                 </div>
-            `;
+            </div>`;
         }
     });
 }
 
-function filtrar(categoria) {
-    renderPosts(categoria);
+function filtrar(cat) {
+    renderPosts(cat, searchInput.value.toLowerCase());
 }
 
-/* Carrega tudo ao abrir */
-renderPosts("todos");
+searchInput.addEventListener("keyup", () => {
+    renderPosts("todos", searchInput.value.toLowerCase());
+});
+
+renderPosts();
 </script>
 
 </body>
